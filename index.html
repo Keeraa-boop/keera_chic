@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#641d35">
+<title>Keera Chic Accessories</title>
+
+<style>
+:root {
+  --wine: #641d35;
+  --pink: #f8dce5;
+  --gold: #d8b56d;
+  --cream: #fffaf7;
+  --text: #39232b;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: var(--cream);
+  color: var(--text);
+}
+
+/* الواجهة الأولى: تغطي الشاشة كاملة */
+.hero {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 30px 18px 55px;
+  overflow: hidden;
+
+  background-color: var(--wine);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(48, 5, 22, 0.05) 35%,
+      rgba(48, 5, 22, 0.65) 100%
+    ),
+    url("file_00000000b76c81f4890facd27061ada3.png");
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 500px;
+}
+
+.hero h1 {
+  color: #fff1d0;
+  font-family: Georgia, serif;
+  font-size: clamp(27px, 7vw, 42px);
+  line-height: 1.5;
+  margin: 0 0 22px;
+  text-shadow: 0 2px 14px rgba(0,0,0,0.45);
+}
+
+.enter-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 14px 28px;
+  border: 1px solid var(--gold);
+  border-radius: 40px;
+  background: rgba(100, 29, 53, 0.88);
+  color: white;
+  text-decoration: none;
+  font-size: 15px;
+  transition: background 0.2s ease;
+}
+
+.enter-button:hover {
+  background: #842746;
+}
+
+.arrow {
+  color: var(--gold);
+  font-size: 20px;
+}
+
+/* شريط التنقل */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding: 18px 12px;
+  background: var(--wine);
+  border-bottom: 2px solid var(--gold);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* المنتجات */
+section.products-section {
+  padding: 42px 16px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--wine);
+  font-size: 27px;
+  margin: 0 0 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #8b7079;
+  margin: 0 0 28px;
+  line-height: 1.8;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  max-width: 900px;
+  margin: auto;
+}
+
+.product {
+  background: white;
+  border: 1px solid #efdee3;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 16px;
+}
+
+.product-image {
+  aspect-ratio: 1 / 1;
+  background: linear-gradient(145deg, #f8e5eb, #e8d3b1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wine);
+  font-size: 42px;
+}
+
+.product h3 {
+  color: var(--wine);
+  font-size: 15px;
+  margin: 14px 5px 8px;
+}
+
+.price {
+  color: #785060;
+  font-size: 13px;
+  margin: 8px;
+}
+
+.order-button {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: var(--wine);
+  color: white;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.welcome {
+  margin: 12px 16px 35px;
+  padding: 25px 16px;
+  text-align: center;
+  background: var(--pink);
+  border: 1px solid #e9c8d4;
+  border-radius: 10px;
+  line-height: 2;
+}
+
+footer {
+  padding: 27px 12px;
+  text-align: center;
+  color: white;
+  background: var(--wine);
+  border-top: 3px solid var(--gold);
+  line-height: 2;
+  font-size: 13px;
+}
+
+footer strong {
+  color: var(--gold);
+}
+
+@media (min-width: 650px) {
+  .products {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .hero {
+    padding-bottom: 65px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- الواجهة الأولى -->
+<main>
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h1>مرحبًا بكِ في عالم الأناقة</h1>
+      <a class="enter-button" href="#products">
+        اكتشفي المجموعة
+        <span class="arrow">←</span>
+      </a>
+    </div>
+  </section>
+
+  <nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#products">منتجاتنا</a>
+    <a href="#contact">اتصلي بنا</a>
+  </nav>
+
+  <section class="products-section" id="products">
+    <h2 class="section-title">تشكيلتنا</h2>
+    <p class="subtitle">قطع صغيرة، وأناقة كبيرة ✨</p>
+
+    <div class="products">
+      <article class="product">
+        <div class="product-image">♡</div>
+        <h3>خواتم أنيقة</h3>
+        <p class="price">السعر يُعلن قريبًا</p>
+        <a class="order-button" href="#contact">اطلبي الآن</a>
+      </article>
+
+      <article class="product">
+        <div class="product-image">✧</div>
+        <h3>أقراط مميزة</h3>
+        <p class="price">السعر يُعلن قريبًا</p>
+        <a class="order-button" href="#contact">اطلبي الآن</a>
+      </article>
+
+      <article class="product">
+        <div class="product-image">♡</div>
+        <h3>أطقم إكسسوارات</h3>
+        <p class="price">السعر يُعلن قريبًا</p>
+        <a class="order-button" href="#contact">اطلبي الآن</a>
+      </article>
+
+      <article class="product">
+        <div class="product-image">✧</div>
+        <h3>سلاسل وأساور</h3>
+        <p class="price">السعر يُعلن قريبًا</p>
+        <a class="order-button" href="#contact">اطلبي الآن</a>
+      </article>
+    </div>
+  </section>
+
+  <div class="welcome">
+    <strong>Keera Chic Accessories 💗</strong><br>
+    نختار لكِ إكسسوارات تضيف لمسة من الجمال لكل يوم.
+  </div>
+
+  <section class="products-section" id="contact">
+    <h2 class="section-title">يسعدنا تواصلكِ</h2>
+    <p class="subtitle">
+      قريبًا نضيفو رابط واتساب لتأكيد الطلبات.
+    </p>
+  </section>
+</main>
+
+<footer>
+  <strong>Keera Chic Accessories</strong><br>
+  شكرًا لزيارتكِ متجرنا 💗
+</footer>
+
+</body>
+</html>
